@@ -2,11 +2,28 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./map.css">
+        <meta charset="utf-8">
     </head>
     <body>
         <div id='mapContainer'>
-            <img src="./" alt="map">
+            <div id="viewMap">  
+                <img src="./img/streetView.png" class="grayscale"></img>
+                <button id="startButton">COMMENCER L'EXPERIENCE</button>
+            </div>
+            <div id="heroContainer">
+                <div id="turbine" class="grayscale filter-section">
+                    <img src="./img/cailloux.jpg" class="imgPorte"></img>
+                </div>
+                <div id="papeteries" class="grayscale filter-section">
+                    <img src="./img/sapins.jpg" class="imgPorte"></img>
+                </div>
+                <div id="forges" class="grayscale filter-section">
+                    <img src="./img/fleurs.jpg" class="imgPorte"></img>
+                </div>
+            </div>
         </div>
+
+        <script src="scriptProto.js"></script>
     </body>
 </html>
