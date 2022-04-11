@@ -4,10 +4,38 @@
     <head>
         <link rel="stylesheet" href="./dragAndDrop.css">
         <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     </head>
     <body>
-        <div id="video"></div>
-        <div id="mask"></div>
+        <div id="videoContainer" class="draggable">
+            <video id="background-video" autoplay loop muted>
+                <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    
+        <!-- <div class="el"></div> -->
+
+        <script>
+            // -------------- DRAG AND DROP -------------- //
+            // https://www.html5rocks.com/en/tutorials/dnd/basics/
+            // target elements with the "draggable" class
+            const position = { x: 0, y: 0 }
+            interact('.draggable').draggable({
+            listeners: {
+                start (event) {
+                console.log(event.type, event.target)
+                },
+                move (event) {
+                position.x += event.dx
+                position.y += event.dy
+
+                event.target.style.transform =
+                    `translate(${position.x}px, ${position.y}px)`
+                },
+            }
+            })
+        </script>
 
         <script src="scriptProto.js"></script>
     </body>
