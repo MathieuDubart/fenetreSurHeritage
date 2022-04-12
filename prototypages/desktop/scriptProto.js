@@ -3,19 +3,18 @@
 
 // -------------- SCRIPT MAP -------------- //
 
-// let viewMap = document.getElementById("viewMap");
-// let heroContainer = document.getElementById("heroContainer");
-// let startButton = document.getElementById("startButton");
+let viewMap = document.getElementById("viewMap");
+let heroContainer = document.getElementById("heroContainer");
+let startButton = document.getElementById("startButton");
+console.log("js active");
 
-// startButton.addEventListener("click", ()=>{
-//     viewMap.style.display = "none";
-//     heroContainer.style.display = "flex";
-//     startButton.style.display = "none";
-//     console.log("it works");
-// })
-
+startButton.addEventListener("click", ()=>{
+    viewMap.style.display = "none";
+    heroContainer.style.display = "flex";
+    startButton.style.display = "none";
+    console.log("it works");
+})
 // // -------------- DRAG AND DROP -------------- //
-
 // // target elements with the "draggable" class
 // interact('.draggable')
 //   .draggable({
@@ -64,3 +63,35 @@
 
 // // this function is used later in the resizing and gesture demos
 // window.dragMoveListener = dragMoveListener
+
+var items = [
+    {
+      type: "text",
+      title: "Text title",
+      description: "<b>Text item</b> with description.",
+      position: {
+        left: 700,
+        top: 50
+      }
+    },
+    {
+      type: "provider",
+      providerName: "youtube",
+      parameters: {
+        videoId: "iPRiQ6SBntQ"
+      },
+      position: {
+        left: 300,
+        top: 200
+      },
+      sticky: true
+    },
+  ];
+  
+  var options = {
+    allowHtml: true
+  };
+  
+  $(document).ready(function() {
+    $("#my-interactive-image").interactiveImage(items, options);
+  });

@@ -1,11 +1,11 @@
 // create a function for konami code
-const konamiCode = () => {
+const konamiCodeFunction = () => {
     // create an array of keycodes for konami code
-    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+    let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
     // create a variable for the keycodes
-    var konamiCodePosition = 0;
+    let konamiCodePosition = 0;
     // create a variable for the keycode
-    var konamiCodeEntered = [];
+    let konamiCodeEntered = [];
     // create a variable for the keycode entered
     // add an event listener for keydown
     document.addEventListener('keydown', function (event) {

@@ -47,18 +47,43 @@ body {
     transition: 0.7s;
 }
 
-.imgPorte:hover {
-    transform: scale(1.05);
-    transition: 0.7s;
-}
-
 .filter-section:hover {
     filter: grayscale(0%);
+    transition: 0.7s;
+    position: relative;
+    display: flex;
+}
+.filter-section img:hover{
+    transform: scale(1.05);
 }
 
 .grayscale {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+}
+
+.left img{
+    width: 100vw;
+    height: 100vh;
+    object-position: left;
+    object-fit: cover;
+    border: 1px solid violet
+}
+
+.center img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid violet
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    border: 1px solid violet
 }
 
 button {
@@ -70,4 +95,7 @@ button {
     justify-content: center;
     background-color: rgb(210, 122, 56);
     position: absolute;
+}
+button:hover{
+    cursor:pointer;
 }
