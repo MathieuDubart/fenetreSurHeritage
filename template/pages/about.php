@@ -8,7 +8,7 @@
     }
 
 // ############################# LOGO & TITLE #############################
-    echo create_link_image_bloc("images/logo_v3.svg",
+    echo create_link_image_bloc("images/logo_v2.svg",
             "logoToHomepage",
             "?page=homepage",
             "logoHomepage",
