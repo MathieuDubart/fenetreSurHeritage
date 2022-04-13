@@ -17,7 +17,7 @@
     //     <img usemap="#home_map" src="images/mapFigma.png"/></figure>';
 
     echo '<div id="background_image_homepage">';
-        echo '<img src="images/mapFigma.png" id="mapImage" alt="background_image_homepage">';
+        echo '<img src="images/desktop/mapDesktop.jpg" id="mapImage" alt="background_image_homepage">';
         
 
         echo '<div id="cadreHomepage">';
@@ -53,20 +53,32 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
                     "problem",
                     "fade-up");
 
-    echo create_image_bloc("images/afficheTest.jpg",
-                        "img-center-resp flex-center",
-                        "afficheHomepage",
-                        "fade-up");
-    
-    echo create_title_bloc("Une expérience interactive et nostalgique",
-                    "text-left flex-center article-title",
-                    "titleAffiche",
-                    "fade-right");
+    echo create_image_title_text_bloc("images/afficheTest.jpg",
+                                "img-center-resp flex-center",
+                                "Une expérience interactive et nostalgique",
+                                "text-left flex-center article-title",
+                                "Explication expo : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                "text-left flex-center",
+                                "article flex-start", 
+                                "", 
+                                "fade-right");
 
-    echo create_text_bloc("Explication expo : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            "text-left flex-center",
-                            "textAffiche", 
-                            "fade-right");
+    // echo create_image_bloc("images/afficheTest.jpg",
+    //                     "img-center-resp flex-center",
+    //                     "afficheHomepage",
+    //                     "fade-up");
+    
+    // echo create_title_bloc("Une expérience interactive et nostalgique",
+    //                 "text-left flex-center article-title",
+    //                 "titleAffiche",
+    //                 "fade-right");
+
+    // echo create_text_bloc("Explication expo : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //                         "text-left flex-center",
+    //                         "textAffiche", 
+    //                         "fade-right");
+
+
     
     echo create_image_link_bloc("images/store_badge.svg", 
                                     "https://play.google.com/",
@@ -74,20 +86,30 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
                                     "playstoreBadge",
                                     "none");
 
+    echo create_title_text_image_bloc("images/afficheTest.jpg",
+                                    "img-center-resp flex-center",
+                                    "Qu'est ce que la Réalité Augmentée ?",
+                                    "text-left flex-center article-title",
+                                    "Explication AR : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                    "text-left flex-center",
+                                    "article flex-start",
+                                    "",
+                                    "fade-left")
 
-    echo create_title_bloc("Qu'est ce que la Réalité Augmentée ?",
-                    "text-left flex-center article-title",
-                    "titleAR",
-                    "fade-right");
 
-    echo create_text_bloc("Explication AR : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            "text-left flex-center",
-                            "textAR",
-                            "fade-right");
+    // echo create_title_bloc("Qu'est ce que la Réalité Augmentée ?",
+    //                 "text-left flex-center article-title",
+    //                 "titleAR",
+    //                 "fade-right");
 
-    echo create_image_bloc("images/afficheTest.jpg",
-                            "img-center-resp flex-center",
-                            "imgAR",
-                            "none");
+    // echo create_text_bloc("Explication AR : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //                         "text-left flex-center",
+    //                         "textAR",
+    //                         "fade-right");
+
+    // echo create_image_bloc("images/afficheTest.jpg",
+    //                         "img-center-resp flex-center",
+    //                         "imgAR",
+    //                         "none");
 
 ?>

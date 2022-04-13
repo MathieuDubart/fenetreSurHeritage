@@ -1,3 +1,79 @@
+@media screen and (min-width: 980px) {
+    
+ #background_image_homepage{
+        width: 1440px;
+        height: 720px;
+        position: relative;
+        left: calc(50% - 720px);
+    }
+
+    #background_image_homepage > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+    #forges{
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        z-index: 0;
+    }
+    #forges img, #papeteries img, #usine img{
+        object-fit: cover;
+    }
+
+    #papeteries{
+        position: absolute;
+        top: 145px;
+        left: 35px;
+        z-index: 0;
+    }
+
+    #usineDuport{
+        position: absolute;
+        top: 500px;
+        left: 79px;
+        z-index: 0;
+    }
+
+    #titleHomepage{
+        width: 40%;
+        margin-left: 30%;;
+        position: absolute;
+        top: 300px;
+        text-align: center;
+        color: white;
+        background-color: transparent;
+        font-size: 32px;
+    }
+
+    #cadreHomepage{
+        position: absolute;
+        width: 294px;
+        height: 638px;
+        left: calc(50% - 147px);
+        top: calc(50% - 319px);
+        border: 2px solid #FFFFFF;
+        overflow: hidden;
+    }
+
+    .logoHomepage{
+        position: absolute;
+        width: 25px;
+        height: auto;
+        left: 25%;
+        top: 15px;
+        z-index: 0;
+    }
+    /* #logoHomepage img{
+        object-fit: cover;
+    } */
+}
+
+
+
 @media screen and (max-width: 980px) {
    
    #background_image_homepage{

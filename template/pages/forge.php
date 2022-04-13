@@ -20,8 +20,9 @@
 
     echo '<div id=text-container>';
     // echo create_empty_bloc("empty-bloc", "forgeEmptyBloc", "none");
-    echo create_image_text_bloc("images/logo_V2.svg",
+    echo create_image_link_text_bloc("images/logo_V2.svg",
                                     "flex-center",
+                                    "?page=homepage",
                                     "Les Forges",
                                     "big-title",
                                     "semi-sized",

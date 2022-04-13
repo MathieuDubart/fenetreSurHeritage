@@ -8,7 +8,7 @@
     }
 
     echo create_title_bloc("NOTRE PROJET", 
-                    "text-left flex-center article-title big-title",
+                    "text-left flex-center article-title big-title seven-zero-sized",
                     "titleAboutPage",
                     "fade-up");
 
