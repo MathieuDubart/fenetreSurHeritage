@@ -1,6 +1,4 @@
 <?php
-    echo "im the content page";
-
     $get = $_GET;
 
     $error404 = true;

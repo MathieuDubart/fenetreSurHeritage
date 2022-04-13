@@ -20,6 +20,5 @@ function reduceVideo() {
 window.addEventListener("scroll", () => {
         reduceVideo();
         console.log("it works");
+        console.log(window.scrollY);
 })
-
-

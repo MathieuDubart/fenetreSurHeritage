@@ -1,3 +1,6 @@
+// ##################################### KONAMI CODE ##################################### //
+
+
 // create a function for konami code
 const konamiCodeFunction = () => {
     // create an array of keycodes for konami code
