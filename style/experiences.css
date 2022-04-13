@@ -1,21 +1,48 @@
-#contentContainer {
+
+.contentContainer {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#videoContainer {
+.videoContainer {
     height: 100%;
     width: 100vw;
-    position: relative;
     transition: 0.7s;
 }
 
-#background-video {
+.background-video {
     height: 100%;
-    /* width: 100%; */
+    width: 100%;
     object-fit: cover;
     transition: 0.7s;
     z-index: -100;
+}
+
+.text-container {
+    width: 100vw;
+
+}
+.exp-title {
+    position: relative;
+    z-index: 100;
+    top: 150%;
+    margin: 0 32px 175px 32px;
+}
+
+.exp-title img {
+    height: 85px;
+    width: 45px;
+    margin: 0 0 16px 0;
+}
+
+.exp-title p {
+    color: #EB6316;
+    font-family: 'Veneer';
+    font-size: 50px;
+    line-height: 1;
 }
 
 #footer {
@@ -23,21 +50,36 @@
     position: relative;
 }
 
+.text-container{
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-size {
+    width: 30%;
+}
+
+
 @media screen and (max-width: 980px) {
 
-    #contentContainer {
+    .contentContainer {
         height: 100vh;
         width: 100vw;
     }
 
-    #videoContainer {
+    .videoContainer {
         height: 100%;
         width: 100%;
         position: relative;
         transition: 0.7s;
     }
 
-    #background-video {
+    .background-video {
         height: 100%;
         /* width: 100%; */
         object-fit: cover;
@@ -45,6 +87,9 @@
         z-index: -100;
     }
 
+    .text-container {
+        display: block;
+    }
     .el {
         width: 100%;
         height: 100%;
@@ -62,49 +107,47 @@
         mask-position: center;
     }
 
-    #test{
+    .test{
         width: 100%;
         height: 150%;
         background-color: rgb(98, 204, 40);
     }
-    #test2{
+    .test2{
         width: 100%;
         height: 150%;
         background-color: rgb(0, 255, 195);
     }
-    #test3{
+    .test3{
         width: 100%;
         height: 150%;
         background-color: rgb(125, 36, 180);
     }
 
-    #text-container{
-        width: 100%;
-        height: fit-content;
-        z-index: 100;
-    }
-
-    #forgesTitle {
+    .exp-title {
         position: relative;
         z-index: 100;
         margin: 0 32px 175px 32px;
     }
 
-    #forgesTitle img {
+    .forgesTitle img {
         height: 85px;
         width: 45px;
         margin: 0 0 16px 0;
     }
 
-    #forgesTitle p {
+    .forgesTitle p {
         color: #EB6316;
         font-family: 'Veneer';
         font-size: 50px;
         line-height: 1;
     }
+
+    .desktop-size {
+        width: 70%;
+    }
     
 }
 
-#text6Forge{
+.text6Forge{
     display:none;
 }

@@ -1,34 +1,34 @@
 // ############################# EXPERIENCES PAGES VIDEO ################################# //
 
 function reduceVideo() {
-    var x = document.getElementById("background-video");
-    var y = document.getElementById("videoContainer");
+    var x = document.getElementsByClassName("background-video");
+    var y = document.getElementsByClassName("videoContainer");
     
     if(window.scrollY > 10){
         if (window.innerWidth > 980){
-            x.style.width = "15%";
-            y.style.left = "calc(50% - 7.5%)";
+            x[0].style.width = "15%";
+            y[0].style.left = "calc(50% - 7.5%)";
+            x[0].style.height = "75%";
+            y[0].style.top = "calc(50vh - 37.5%)";
         }  else {
             if(window.scrollY > 10){
-                x.style.width = "50%";
+                x[0].style.width = "50%";
+                y[0].style.left = "calc(50% - 25%)";
+                x[0].style.height = "500px";
+                y[0].style.top = "calc(50vh - 250px)";
             }
         }
-
-            x.style.height = "500px";
-            y.style.left = "calc(50% - 25%)";
-            y.style.left = "calc(50% - 25%)";
-            y.style.top = "calc(50vh - 250px)";
-            y.style.position = "fixed";
-            y.style.float = "center";
+        y[0].style.position = "fixed";
+        y[0].style.float = "center";
     }
 
 
     if (window.scrollY <= 10){
-            x.style.width = "100%";
-            x.style.height = "100%";
-            y.style.left ="0";
-            y.style.top = "0";
-            x.style.position = "relative";
+        x[0].style.width = "100%";
+        x[0].style.height = "100%";
+        y[0].style.left ="0";
+        y[0].style.top = "0";
+        x[0].style.position = "relative";
     }
 }
 

@@ -40,8 +40,9 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
             "page-title flex-center heigt-five-sized",
             "titleHomepage",
             "fade-right");
-        echo create_image_bloc("images/logo_V3.svg",
-                                "logoHomepage",
+        echo create_link_image_bloc("images/logo_v3.svg",
+                                "logoToHomepage",
+                                "?page=homepage",
                                 "logoHomepage",
                                 "fade-right");
         
@@ -94,7 +95,7 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
                                     "text-left flex-center",
                                     "article flex-start",
                                     "",
-                                    "fade-left")
+                                    "fade-left");
 
 
     // echo create_title_bloc("Qu'est ce que la Réalité Augmentée ?",

@@ -39,6 +39,31 @@ a{
 .flex-column{
     flex-direction:column;
 }
+.flex-wrap{
+    flex-wrap:wrap;
+    /* flex-grow: ; */
+}
+#galleryContainer{
+    width:100%;
+    height:fit-content;
+    padding-top: 24px;
+    /* border: 1px solid green; */
+}
+#gallery{
+    width:820px;
+    height:fit-content;
+    padding-bottom: 24px;
+    /* border:1px solid red; */
+}
+#gallery img{
+    width: 300px;
+    height: auto;
+    padding: 24px;
+}
+#mainTitles{
+    position: relative;
+    margin-top: 80px;
+}
 
 #error404 {
     width:100%;
@@ -62,14 +87,20 @@ a{
     text-shadow: 0px 0px 10px black;
 }
 
+a:visited {
+    color: white;
+}
+
+/* ########################################### MEDIA QUERIE #####################################*/
 @media screen and (min-width: 980px) {
 
 
-    .article{
-        width:70%;
+    .article{  
+        width: 820px;
         height: fit-content;
-        margin-left: 15%;
+        margin-left: calc(50% - 410px);
         flex-direction: row;
+        /* border: 1px solid green; */
     }
     .article h1{
         color:#EB6316;
@@ -167,12 +198,15 @@ a{
     }
     .shadow-left{
         box-shadow: -10px 10px 0px #EB6316;
+        right: 250px;
     }
     .shadow-right{
         box-shadow: 10px 10px 0px #EB6316;
+        left: 250px;
     }
 
     #playstoreBadge {
+        display: none;
         height: 50px;
         width: 100%;
         margin: 12px 0 12px 0;
@@ -190,7 +224,7 @@ a{
     }
     .article-title {
         background-color: whitesmoke;
-        color: #F0821B;
+        color: #EB6316;
         /* margin: 12px 0 12px 0; */
     }
     .page-title h1{
@@ -228,10 +262,14 @@ a{
         font-size: 50px;
         top: 50%;
     }
+    #mainTitles{
+        position: relative;
+        margin-top: 80px;
+    }
 
     .article{
         width:100%;
-        height:100vh;
+        height:fit-content;
         flex-direction: column;
     }
     .img-center-resp{
@@ -286,9 +324,10 @@ a{
         font-family: 'Futura';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 27px;
         z-index: 100;
+        padding-bottom: 24px;
     }
     
     .frame-exp{
@@ -306,6 +345,7 @@ a{
     }
 
     #playstoreBadge {
+        display: flex;
         height: 50px;
         width: 100%;
         margin: 12px 0 12px 0;

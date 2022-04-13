@@ -10,6 +10,14 @@
         $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'"><img src="'.$image.'" alt="image" /></div>';
         return $html;
     }
+    function create_link_image_bloc($image, $class, $link, $id, $aos) {
+        $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'">
+                    <a href="'.$link.'">
+                        <img src="'.$image.'" alt="image" />
+                    </a>
+                </div>';
+        return $html;
+    }
 
     //create a function that create a video bloc
     function create_video_bloc($video, $class, $id) {
@@ -65,6 +73,17 @@
                 '</p></div>';
         return $html;
     }
+    function create_link_image_title_bloc($image, $classImg, $link, $classLink, $textTitle, $classH, $classDiv, $id, $aos) {
+        $html = '<div class="'.$classDiv.'" id="'.$id.'" data-aos="'.$aos.'">
+                    <div class="'.$classLink.'">
+                        <a href="'.$link.'">
+                            <img src="'.$image.'" class="'.$classImg.'" alt="image" />
+                        </a>
+                    </div>
+                    <div class="'.$classH.'"><h1>'.$textTitle.'</h1></div>
+                </div>';
+        return $html;
+    }
 
     // create a function that create a title text bloc
     function create_title_bloc($text, $class, $id, $aos) {
@@ -85,6 +104,19 @@
     //create a function that create an empty html bloc
     function create_empty_bloc($class, $id, $aos) {
         $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'"></div>';
+        return $html;
+    }
+
+    //create a function that create a gallery of images
+    function create_gallery_bloc($images, $subtitles, $class, $id, $aos) {
+        $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'">';
+        for ($i=0; $i < count($images); $i++) {
+            $html .= '<div class="flex-center flex-column" data-aos="'.$aos.'">
+                        <img src="'.$images[$i].'" alt="image" />
+                        <p>'.$subtitles[$i].'</p>
+                    </div>';
+        }
+        $html .= '</div>';
         return $html;
     }
 

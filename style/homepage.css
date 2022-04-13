@@ -1,6 +1,6 @@
 @media screen and (min-width: 980px) {
     
- #background_image_homepage{
+#background_image_homepage{
         width: 1440px;
         height: 720px;
         position: relative;
@@ -59,7 +59,7 @@
         overflow: hidden;
     }
 
-    .logoHomepage{
+    .logoToHomepage{
         position: absolute;
         width: 25px;
         height: auto;
@@ -72,7 +72,7 @@
     } */
 }
 
-
+/* ########################################### MEDIA QUERIE #####################################*/
 
 @media screen and (max-width: 980px) {
    
@@ -132,7 +132,7 @@
         border: 2px solid #FFFFFF;
         overflow: hidden;
     }
-    .logoHomepage{
+    .logoToHomepage{
         position: absolute;
         width: 25px;
         height: auto;
