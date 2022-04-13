@@ -1,4 +1,19 @@
 <?php
-    echo "<div id='credit'><p>Créé par un mec qui veut voter Poutou alors qu'il porte constamment 5 produits Apple sur lui</p></div>";
-    echo "<div id='instagram'><a><img src='https://www.lot-46.com/wp001/wp-content/uploads/2019/10/Instagram-logo-orange.png'></a></div>";
+
+echo "<div id='footerFirstRow'>";
+    
+echo "<div id='about'>
+          <a href='?page=about'><p>À PROPOS</p></a>
+     </div>";
+
+echo "<div id='socialMedias'>
+          <a><img id='instagram' src='images/instagram.svg'></a>
+     </div>";
+
+echo "</div>";
+
+echo "<div id='credits'>
+          <p>Codé par Mathieu Dubart, Nils Boisson et Bassam Belayachi-Wagner</p>
+     </div>";
+
 ?>

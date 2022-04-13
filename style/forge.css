@@ -1,7 +1,4 @@
 @media screen and (max-width: 980px) {
-    bofy{
-        z-index: -2;
-    }
 
     #contentContainer {
         height: 100vh;
@@ -20,6 +17,7 @@
         /* width: 100%; */
         object-fit: cover;
         transition: 0.7s;
+        z-index: -100;
     }
 
     .el {
@@ -60,5 +58,25 @@
         height: fit-content;
         z-index: 100;
     }
+
+    #forgesTitle {
+        position: relative;
+        z-index: 100;
+        margin: 0 32px 175px 32px;
+    }
+
+    #forgesTitle img {
+        height: 85px;
+        width: 45px;
+        margin: 0 0 16px 0;
+    }
+
+    #forgesTitle p {
+        color: #EB6316;
+        font-family: 'Veneer';
+        font-size: 50px;
+        line-height: 1;
+    }
 }
+
 

@@ -3,36 +3,25 @@
     padding:0px;
     box-sizing:border-box;
 }
+@font-face {
+    font-family: 'Veneer';
+    src: url("/fenetreSurHeritage/fonts/Veneer/Veneer/Veneer.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Futura';
+    src: url("/fenetreSurHeritage/fonts/Futura/Futura.ttc") format("truetype");
+}
 
 body,html{
     background-color:whitesmoke;
     color:black;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Veneer';
     overflow-x: hidden;
 }
 
-#header{
-    display:flex;
-}
-
-#logo{
-    margin-top:1rem;
-    margin-left:1vw;
-    position:relative;
-    display:flex;
-}
-
-#logo img{
-    width:20em;
-}
-
-#title{
-    display:block;
-    font-size:10em;
-    font-weight:bold;
-    align-content:center;
-    justify-content:center;
-    margin-left:2vw;
+a{
+    text-decoration:none;
+    color:none;
 }
 
 /* ########################################### CSS FOR BLOC FUNCTION #####################################*/
@@ -84,14 +73,35 @@ body,html{
     .seven-zero-sized{
         width: 70%;
     }
+    .heigt-zero-sized{
+        width: 80%;
+    }
+    .heigt-five-sized{
+        width: 85%;
+    }
+
     p{
-        /* font-family: 'Futura'; */
+        font-family: 'Futura';
         font-style: normal;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 27px;
+        z-index: 100;
     }
     
+    .frame-exp{
+        border: 2px solid #EB6316;
+        background-color: whitesmoke;
+        position: relative;
+        margin: 0 32px 175px 32px;
+        
+    }
+    .shadow-left{
+        box-shadow: -10px 10px 0px #EB6316;
+    }
+    .shadow-right{
+        box-shadow: 10px 10px 0px #EB6316;
+    }
 
     #playstoreBadge {
         height: 50px;
@@ -105,7 +115,7 @@ body,html{
     }
 
     .page-title {
-        background-color: #F0821B;
+        background-color: #EB6316;
         color: white;
         margin: 24px 0 12px 0;
     }
@@ -116,9 +126,11 @@ body,html{
     }
     .page-title h1{
         font-weight: bold;
+        font-family: "Veneer";
     }
     .article-title h1{
         font-weight: bold;
+        font-family: "Veneer";
         
     }
     .big-title{
@@ -128,16 +140,8 @@ body,html{
         height: 500px;
         width: 100%;
     }
+
+
+   
 }
 
-
-
-
-
-
-#footer{
-    position:relative;
-    display:flex;
-    margin-bottom:0;
-    background-color:rgb(23, 23, 23);
-}

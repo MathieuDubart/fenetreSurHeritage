@@ -18,24 +18,39 @@
 
     echo '<div id="background_image_homepage">';
         echo '<img src="images/mapFigma.png" id="mapImage" alt="background_image_homepage">';
+        
+
+        echo '<div id="cadreHomepage">';
         echo '<a href="?page=forge"><div id="forges">
-                <img src="images/forges.svg" alt="forges">
-            </div></a>';
+        <img src="images/forgeV2.svg" alt="forges">
+    </div></a>';
 
-        echo '<a href="?page=papeteries"> <div id="papeteries">
-                <img src="images/papets.svg" alt="papeteries">
-            </div></a>';
+echo '<a href="?page=papeteries"> <div id="papeteries">
+        <img src="images/papeterieV2.svg" alt="papeteries">
+    </div></a>';
 
-        echo '<a href="?page=usineDuport"><div id="usineDuport">
-                <img src="images/usine.svg" alt="usines Duport">
-            </div></a>';
+    
+
+echo '<a href="?page=usineDuport"><div id="usineDuport">
+        <img src="images/usineV2.svg" alt="usines Duport">
+    </div></a>';
+        echo '</div>';
+
+        echo create_title_bloc("FENÊTRE SUR NOTRE HERITAGE",
+            "page-title flex-center heigt-five-sized",
+            "titleHomepage",
+            "fade-right");
+        echo create_image_bloc("images/logo_V3.svg",
+                                "logoHomepage",
+                                "logoHomepage",
+                                "fade-right");
         
     echo '</div>';
 
 
     echo create_title_bloc("Comment renouer avec le passé, entre réabilitation et oubli ?", 
                     "text-left flex-center page-title",
-                    "titleHomepage",
+                    "problem",
                     "fade-up");
 
     echo create_image_bloc("images/afficheTest.jpg",

@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/homepage.css">
     <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/papeteries.css">
     <link rel="stylesheet" href="style/forge.css">
     <link rel="stylesheet" href="style/usineDuport.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
@@ -26,11 +31,11 @@
 
     <!--                    HEADER                    -->
 
-    <div id="header">
+    <!-- <div id="header" class='flex-center'> -->
         <?php
             // require"template/structure/header.php";
         ?>
-    </div>
+    <!-- </div> -->
 
     <!--                    CONTENT                    -->
 
@@ -44,7 +49,7 @@
 
     <div id="footer">
         <?php
-            // require"template/structure/footer.php";
+            require"template/structure/footer.php";
         ?>
     </div>
     <script src="script/script.js"></script>

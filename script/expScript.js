@@ -5,9 +5,9 @@ function reduceVideo() {
     var y = document.getElementById("videoContainer");
     if(window.scrollY > 10){
     x.style.width = "50%";
-    x.style.height = "60%";
+    x.style.height = "500px";
     y.style.left = "calc(50% - 25%)";
-    y.style.top = "calc(50% - 25%)";
+    y.style.top = "calc(50vh - 250px)";
     y.style.position = "fixed";
     y.style.float = "center";
     }

@@ -20,18 +20,18 @@
     }
 
     //create a function that create an html text bloc and image bloc
-    function create_text_image_bloc($text, $image, $class, $id, $aos) {
-        $html = '<div class="'.$class.'" id="'.$id.'"  data-aos="'.$aos.'">
-                    <img src="'.$image.'" alt="image" />'.$text.'
+    function create_text_image_bloc($text, $classPara, $image, $classImg, $classDiv, $id, $aos) {
+        $html = '<div class="'.$classDiv.'" id="'.$id.'"  data-aos="'.$aos.'">
+                    <img src="'.$image.'" class="'.$classImg.'" alt="image" /><p class="'.$classPara.'">'.$text.'</p>
                 </div>';
         return $html;
     }
 
     //create a function that create an image and text bloc
-    function create_image_text_bloc($image, $text, $class, $id, $aos) {
-        $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'">
-                    <img src="'.$image.'" alt="image" />'.$text.
-                '</div>';
+    function create_image_text_bloc($image, $classImg, $text, $classPara, $classDiv, $id, $aos) {
+        $html = '<div class="'.$classDiv.'" id="'.$id.'" data-aos="'.$aos.'">
+                    <img src="'.$image.'" class="'.$classImg.'" alt="image" /><p class="'.$classPara.'">'.$text.
+                '</p></div>';
         return $html;
     }
 
