@@ -43,6 +43,17 @@ a{
     flex-wrap:wrap;
     /* flex-grow: ; */
 }
+.fixed{
+    position:fixed;
+}
+/* .none{
+    display: none;
+    transition: 0.5s;
+}
+.block{
+    display: block;
+    transition: 0.5s;
+} */
 #galleryContainer{
     width:100%;
     height:fit-content;
@@ -88,6 +99,18 @@ a{
 }
 
 a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+a {
     color: white;
 }
 

@@ -60,7 +60,8 @@
     }
 
     .logoToHomepage{
-        position: absolute;
+        display: none;
+        position: fixed;
         width: 25px;
         height: auto;
         left: 25%;
@@ -133,13 +134,14 @@
         overflow: hidden;
     }
     .logoToHomepage{
-        position: absolute;
+        display: none;
+        position: fixed;
         width: 25px;
         height: auto;
         left: 30px;
         top: 15px;
         z-index: 0;
-        
+        transition: 0.5s;
     }
     /* #logoHomepage img{
         object-fit: cover;
