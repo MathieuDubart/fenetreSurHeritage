@@ -31,6 +31,13 @@
         // array_push($homepageArray, $row);
     }
 
+// ############################# LOADING PAGE #############################
+echo '<div class="loadingPage">
+            <div class="rightload">
+                <img src="video/loading.gif" alt="">
+            </div>
+        </div>';
+
 // ############################# LOGO & TITLE #############################
     echo create_link_image_bloc($logoAbout[0]['content'],
             "logoToHomepageAbout",

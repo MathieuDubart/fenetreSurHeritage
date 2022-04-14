@@ -35,6 +35,13 @@
     // echo "<pre>";
     //     print_r($articleAffiche);
     // echo "</pre>";
+    
+    // ############################# LOADING PAGE #############################
+    echo '<div class="loadingPage">
+            <div class="rightload">
+                <img src="video/loading.gif" alt="">
+            </div>
+        </div>';
 
     echo '<div id="background_image_homepage">';
         echo '<img src="images/desktop/mapDesktop.jpg" id="mapImage" alt="background_image_homepage">';

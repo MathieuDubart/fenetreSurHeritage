@@ -14,8 +14,21 @@
 
     
         <!-- <div class="el"></div> -->
-        <div class="loadingPage"></div>
-        
+        <div class="loadingPage">
+            <!-- <div class="leftload"> 
+               <p> CHARGEMENT </p>
+            </div> -->
+
+            <div class="rightload">
+                <img src="../../video/loading.gif" alt="">
+            </div>
+        </div>
+        <script>
+            window.onload = function() {
+                document.querySelector('.loadingPage').style.display = 'none';
+            }
+        </script>
+
         <script>
             // -------------- DRAG AND DROP -------------- //
             // https://www.html5rocks.com/en/tutorials/dnd/basics/

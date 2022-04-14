@@ -38,6 +38,12 @@
         // array_push($visualizerArray, $row);
     }
 
+    // ############################# LOADING PAGE #############################
+    echo '<div class="loadingPage">
+            <div class="rightload">
+                <img src="video/loading.gif" alt="">
+            </div>
+        </div>';
     
     echo '<div class="contentContainer">';
             echo '<div class="videoContainer">

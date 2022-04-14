@@ -23,7 +23,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
 </head>
-<body>
+<body class="stop-scrolling">
         <script>
             AOS.init();
         </script>

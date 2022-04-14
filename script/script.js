@@ -32,12 +32,20 @@ const konamiCodeFunction = () => {
     });
 }
 */
+/* ########################################### LOADING PAGE #####################################*/
+// document.body.classList.add('stop-scrolling');
+window.onload = function() {
+    document.body.classList.remove('stop-scrolling');
+    document.querySelector(".loadingPage").style.display = "none";
+}
+
+/* ########################################### KONAMI CODE #####################################*/
+
+const keyHandler = (event) => {
+    console.log(event.key);
+};
 
 document.addEventListener('keydown', keyHandler, false);
-
-let keyHandler = (event) => {
-	console.log(event.key);
-};
 
 var pattern = ['ArrowUp',
     'ArrowUp',
