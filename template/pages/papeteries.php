@@ -26,7 +26,7 @@
 
     echo '<div class=text-container>';
     // echo create_empty_bloc("empty-bloc", "forgeEmptyBloc", "none");
-    echo create_text_bloc("Les papeteries",
+    echo create_text_bloc("Les Papeteries",
                             "semi-sized big-title exp-title",
                             "forgesTitle",
                             "fade-up");

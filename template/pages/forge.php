@@ -18,16 +18,18 @@
         echo '</div>';
     echo '</div>';
 
+    echo create_link_image_bloc("images/logo_v2.svg",
+    "logoToHomepage",
+    "?page=homepage",
+    "logoHomepage",
+    "fade-right");
+
     echo '<div class=text-container>';
     // echo create_empty_bloc("empty-bloc", "forgeEmptyBloc", "none");
-    echo create_image_link_text_bloc("images/logo_v2.svg",
-                                    "flex-center",
-                                    "?page=homepage",
-                                    "Les Forges",
-                                    "big-title",
-                                    "semi-sized exp-title",
-                                    "forgesTitle",
-                                    "fade-up");
+    echo create_text_bloc("Les Forges",
+                            "semi-sized big-title exp-title",
+                            "forgesTitle",
+                            "fade-up");
 
     echo create_text_bloc("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "text-left flex-center seven-zero-sized desktop-size frame-exp shadow-left",
