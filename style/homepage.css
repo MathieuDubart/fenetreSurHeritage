@@ -80,6 +80,33 @@
     /* #logoHomepage img{
         object-fit: cover;
     } */
+    .avis{
+        width: 25%;
+        height: 200px;
+        min-height: 200px;
+        margin: 24px;
+        /* border: 2px solid #EB6316; */
+    }
+    .avis img{
+        width: 40px;
+        height: 40px;
+        margin: 12px;
+        /* object-fit: cover; */
+    }
+    #firstLine{
+        width: 100%;
+        height: fit-content;
+        min-height: 25%;
+        background-color: #e7d8cf;
+        /* border: 1px solid green; */
+    }
+    #secondLine{
+        width: 100%;
+        height: fit-content;
+        min-height: 75%;
+        background-color: #eee6e1;
+        /* border: 1px solid cyan; */
+    }
 }
 
 
@@ -206,5 +233,35 @@
     #adress {
         margin: 0 0 0 0;
         padding: 0 0 12px 0;
+    }
+    .avis{
+        width: 100%;
+        height: 200px;
+        margin: 24px;
+        padding: 0 24px 0 24px;
+        /* border: 2px solid #EB6316; */
+        flex-direction: column;
+    }
+    .avis img{
+        width: 40px;
+        height: 40px;
+        margin: 12px;
+        /* object-fit: cover; */
+    }
+    #avisContainer{
+        flex-direction: column;
+        
+    }
+    #firstLine{
+        width: 100%;
+        height: 25%;
+        background-color: #e7d8cf;
+        /* border: 1px solid green; */
+    }
+    #secondLine{
+        width: 100%;
+        height: 75%;
+        background-color: #eee6e1;
+        /* border: 1px solid cyan; */
     }
 }

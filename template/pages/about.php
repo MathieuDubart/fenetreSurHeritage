@@ -88,4 +88,24 @@ echo '<div class="loadingPage">
             "fade-left");
     echo '</div>';
 
+    echo "<div id='titleForm'>
+            <h2 class='text-center flex-center article-title' id='avisTitre'> Votre avis compte </h2>
+        </div>";
+
+    echo "<div id='avisFormContainer'>";
+        echo "<form action='https://wsb1.gobelins.fullstory.fr/' method='POST' id='avisForm'>
+            <p> Nom: <input type='text' name='nom' placeholder='Nom' class='inputStyle' required> </p>
+            <p> Prénom: <input type='text' name='prenom' placeholder='Prénom' class='inputStyle' required> </p>
+            <p> Email: <input type='text' name='email' placeholder='Email' class='inputStyle' required> </p>
+            <p> Avis: <textarea placeholder='Avis' class='inputStyle' required></textarea> <p>
+                <input type='submit' class='btn-homepage' value='envoyer'>
+            </form>";
+    echo "</div>";
+
+    $nom =  strval($_POST['nom']);
+    $prenom =  strval($_POST['prenom']);
+    $email =  strval($_POST['email']);
+    $avis =  strval($_POST['avis']);
+
+    $sendAvis = mysqli_query($connection, "INSERT INTO `ws_avis` (`id_avis`, `nom`, `prenom`, `email`, `avis`) VALUES (NULL, '$nom', '$prenom', '$email', '$avis');");
 ?>

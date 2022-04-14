@@ -16,9 +16,7 @@ startButton.addEventListener("click", ()=>{
 })
 
 
-$(window).load(function() {
-  $('#loadingPage').hide();
-});
+
 
 
 

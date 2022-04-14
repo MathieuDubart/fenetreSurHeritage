@@ -13,13 +13,14 @@
                                     LEFT JOIN ws_content ON ws_bloc.id_bloc = ws_content.id_bloc
                                     WHERE ws_pages.id_page = 1;");
 
-    $titreHomepage = [];
-    $articleAffiche = [];
-    $logoPlayStore = [];
-    $articleAR = [];
+
+$titreHomepage = [];
+$articleAffiche = [];
+$logoPlayStore = [];
+$articleAR = [];
 
 
-    while ($row = mysqli_fetch_assoc($request)) {
+while ($row = mysqli_fetch_assoc($request)) {
         if($row['id_bloc'] == "1"){
             array_push($titreHomepage, $row);
         } else if ($row['id_bloc'] == "2"){
@@ -31,7 +32,7 @@
         }
         // array_push($homepageArray, $row);
     }
-
+    
     // echo "<pre>";
     //     print_r($articleAffiche);
     // echo "</pre>";
@@ -125,6 +126,56 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
             echo '<div id="mapContainer" class="flex-center">';
                 echo '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.1734798930015!2d6.100588516089639!3d45.90784127910882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b85412d20d46f%3A0xcdf72ac7f7fdadd0!2sLes%20Papeteries%20-%20Image%20Factory!5e0!3m2!1sfr!2sfr!4v1649962778435!5m2!1sfr!2sfr" width="350px" height="262.5px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
             echo '</div>';
+        echo '</div>';
+
+// ############################# REQUEST AVIS #############################
+
+    $request_avis = mysqli_query($connection, "SELECT * FROM ws_avis ORDER BY id_avis DESC LIMIT 3");
+
+    $avisArray = [];
+
+    while ($row = mysqli_fetch_assoc($request_avis)) {
+        array_push($avisArray, $row);
+    }
+
+    echo create_title_bloc("ce que vous pensez de nous et de l'expérience", 
+                        "text-left flex-center little-title",
+                        "rencontre",
+                        "fade-up");
+
+        echo '<div class="flex-center articleContainer" id="avisContainer">';
+            echo '<div class="avis flex-start flex-column" id="avis1">';
+                echo '<div class="flex-left flex-row" id="firstLine">
+                    <img src="images/logoAvatar.png" alt="userAvatar">
+                    <h3>'.$avisArray[0]['prenom'].' '.$avisArray[0]['nom'].'<h3>
+                </div>';
+
+                echo '<div class="text-left" id="secondLine">
+                    <p>'.$avisArray[0]['content'].'</p>
+                </div>';
+            echo '</div>';
+
+            echo '<div class="avis flex-start flex-column" id="avis2">';
+            echo '<div class="flex-left flex-row" id="firstLine">
+                <img src="images/logoAvatar.png" alt="userAvatar">
+                <h3>'.$avisArray[1]['prenom'].' '.$avisArray[1]['nom'].'<h3>
+            </div>';
+
+            echo '<div class="text-left" id="secondLine">
+                <p>'.$avisArray[1]['content'].'</p>
+            </div>';
+        echo '</div>';
+
+        echo '<div class="avis flex-start flex-column" id="avis3">';
+            echo '<div class="flex-left flex-row" id="firstLine">
+                <img src="images/logoAvatar.png" alt="userAvatar">
+                <h3>'.$avisArray[2]['prenom'].' '.$avisArray[2]['nom'].'<h3>
+            </div>';
+
+            echo '<div class="text-left" id="secondLine">
+                <p>'.$avisArray[2]['content'].'</p>
+            </div>';
+        echo '</div>';
         echo '</div>';
 
 ?>
