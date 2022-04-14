@@ -7,7 +7,10 @@ echo "<div id='footerContainer' class='flex-center'>";
                </div>";
 
           echo "<div id='socialMedias'>
-                    <a href='https://instagram.com/b1_exhibit'><img id='instagram' src='images/instagram.svg'></a>
+                    <div id='instaContainer'> Instagram: </div>
+                    <div id='instaLogoContainer'>
+                         <a href='https://instagram.com/b1_exhibit'><img id='instagram' src='images/instagram.svg'></a>
+                    </div>
                </div>";
      echo "</div>";
 

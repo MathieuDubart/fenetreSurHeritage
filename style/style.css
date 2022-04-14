@@ -52,6 +52,9 @@ a{
 .block{
     display: block;
 }
+.cover img{
+    object-fit: cover;
+}
 #galleryContainer{
     width:100%;
     height:fit-content;

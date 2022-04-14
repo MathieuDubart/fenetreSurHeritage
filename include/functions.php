@@ -100,6 +100,15 @@
                 </div>';
         return $html;
     }
+    
+    function create_image_link_download_bloc($image, $link, $dl_name, $class, $id, $aos) {
+        $html = '<div class="'.$class.'" id="'.$id.'" data-aos="'.$aos.'">
+                    <a href="'.$link.'" download="'.$dl_name.'">
+                        <img src="'.$image.'" alt="image" />
+                    </a>
+                </div>';
+        return $html;
+    }
 
     //create a function that create an empty html bloc
     function create_empty_bloc($class, $id, $aos) {

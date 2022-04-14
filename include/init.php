@@ -7,7 +7,7 @@
 
 	$login_fail = 0;
 
-	$connection= mysqli_connect("localhost","root","", "test");
+	$connection= mysqli_connect("localhost","root","", "fenetreSurHeritage");
     // $connection= mysqli_connect("kbctervgobelin.mysql.db","kbctervgobelin","B1Dev2022", "kbctervgobelin");
     
     mysqli_set_charset( $connection, 'utf8');

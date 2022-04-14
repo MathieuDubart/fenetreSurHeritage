@@ -82,6 +82,39 @@
     } */
 }
 
+
+#addressContainer {
+    width: 100%;
+    height: fit-content;
+    font-family: 'Futura';
+    font-style: normal;
+    font-size: 18px;
+    margin: 12px 0 24px 0;
+}
+
+
+#adress {
+    margin: 0 24px 0 0;
+    font-weight: 400;
+}
+
+
+.little-title {
+    font-size: 16px;
+    color: #EB6316;
+    font-family: 'Veneer';
+    text-align: left;
+}
+
+.little-title h1 {
+    font-weight: normal;
+    font-family: 'Veneer';
+}
+
+#mapContainer iframe {
+    border: 2px solid #EB6316 !important;
+}
+
 /* ########################################### MEDIA QUERIE #####################################*/
 
 @media screen and (max-width: 767px) {
@@ -104,7 +137,7 @@
     #forges{
         position: absolute;
         top: -15px;
-        left: 42px;
+        left: 16px;
         z-index: 0;
     }
     #forges img, #papeteries img, #usine img{
@@ -113,15 +146,15 @@
 
     #papeteries{
         position: absolute;
-        top: 132px;
-        left: 63px;
+        top: 137px;
+        left: 39px;
         z-index: 0;
     }
 
     #usineDuport{
         position: absolute;
-        top: 456px;
-        left: 101px;
+        top: 458px;
+        left: 77px;
         z-index: 0;
     }
 
@@ -161,9 +194,17 @@
         top: 15px;
         z-index: 0;
     }
-    /* #logoHomepage img{
-        object-fit: cover;
-    } */
-
     
+    #rencontre {
+        text-align: left;
+    }
+
+    #addressContainer {
+        flex-direction: column; 
+    }
+    
+    #adress {
+        margin: 0 0 0 0;
+        padding: 0 0 12px 0;
+    }
 }

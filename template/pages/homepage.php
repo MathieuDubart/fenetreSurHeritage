@@ -85,12 +85,12 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
                                 "fade-right");
     echo '</div>';
     
-    echo create_image_link_bloc($logoPlayStore[0]["content"], 
+    echo create_image_link_download_bloc($logoPlayStore[0]["content"], 
                                     $logoPlayStore[1]["content"],
+                                    $logoPlayStore[2]["content"],
                                     "flex-center", 
                                     "playstoreBadge",
                                     "none");
-
     echo '<div class="flex-center articleContainer">';
     echo create_title_text_image_bloc($articleAR[0]["content"],
                                     "img-center-resp flex-center",
@@ -102,5 +102,22 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
                                     "",
                                     "fade-left");
     echo '</div>';
+
+        echo create_title_bloc("VENEZ NOUS RENCONTRER LE 15 AVRIL À 14H00", 
+                        "text-left flex-center little-title",
+                        "rencontre",
+                        "fade-up");
+
+        echo '<div class="flex-center articleContainer" id="addressContainer">';
+            echo '<div id="adress">';
+                echo '<h4> Les Papeteries - Image Factory </h4>';
+                echo '<h4> 3 Esplanade Augustin Aussedat, </h4>
+                    <h4> CRAN GEVRIER, 74960 </h4>';
+            echo '</div>';
+
+            echo '<div id="mapContainer" class="flex-center">';
+                echo '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.1734798930015!2d6.100588516089639!3d45.90784127910882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b85412d20d46f%3A0xcdf72ac7f7fdadd0!2sLes%20Papeteries%20-%20Image%20Factory!5e0!3m2!1sfr!2sfr!4v1649962778435!5m2!1sfr!2sfr" width="350px" height="262.5px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+            echo '</div>';
+        echo '</div>';
 
 ?>

@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    font-family: 'Futura', sans-serif;
+    font-size: 11px;
 }
 
 #footerFirstRow {
@@ -37,6 +39,23 @@
 
 #socialMedias {
     width: 50%;
+    display: inline-flex;
+}
+
+#instaContainer {
+    width: 50%;
+    color: #EB6316;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: 'Futura', sans-serif;
+    font-size: 13px;
+}
+
+#instaLogoContainer {
+    width: 50%;
+    display: flex;
+    margin: 0 0 0 12px;
 }
 
 #credits {
@@ -59,10 +78,12 @@
 
     #socialMedias {
         width: 50%;
-        padding-left: 100px;
     }
 
     #credits {
         padding: 10px 10px 0 10px;
     }
+
+    
+
 }
