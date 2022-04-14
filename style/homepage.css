@@ -1,4 +1,4 @@
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 767px) {
     
 #background_image_homepage{
         width: 1440px;
@@ -68,6 +68,15 @@
         top: 15px;
         z-index: 0;
     }
+    .logoToHomepageAbout{
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: auto;
+        left: 25%;
+        top: 15px;
+        z-index: 0;
+    }
     /* #logoHomepage img{
         object-fit: cover;
     } */
@@ -75,9 +84,9 @@
 
 /* ########################################### MEDIA QUERIE #####################################*/
 
-@media screen and (max-width: 980px) {
-   
-   #background_image_homepage{
+@media screen and (max-width: 767px) {
+
+#background_image_homepage{
         width: 375px;
         height: 667px;
         position: relative;
@@ -134,7 +143,7 @@
         overflow: hidden;
     }
     .logoToHomepage{
-        display: none;
+        display: block;
         position: fixed;
         width: 25px;
         height: auto;
@@ -142,6 +151,15 @@
         top: 15px;
         z-index: 0;
         transition: 0.5s;
+    }
+    .logoToHomepageAbout{
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: auto;
+        left: 30px;
+        top: 15px;
+        z-index: 0;
     }
     /* #logoHomepage img{
         object-fit: cover;

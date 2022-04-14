@@ -7,14 +7,34 @@
         // $requete=mysqli_query($connection,"SELECT * FROM ws_bloc LIMIT 3");
     }
     
-    // echo '<map name="home_map">
-    //     <area shape="rect" coords="318,64,430.74,205.2" href="./forge.php"/>
-    //     <area shape="rect" coords="328.66,211,442,336" href="./papeteries.php"/>
-    //     <area shape="rect" coords="364.26,527,485.72,702.52" href="./usineDuport.php"/>
-    // </map>';
 
-    // echo '<figure style="text-align:center;">
-    //     <img usemap="#home_map" src="images/mapFigma.png"/></figure>';
+    $request = mysqli_query($connection, "SELECT ws_pages.nom_page, ws_bloc.id_bloc, ws_content.content, ws_content.ordre FROM `ws_pages`
+                                    LEFT JOIN ws_bloc ON ws_pages.id_page = ws_bloc.id_page
+                                    LEFT JOIN ws_content ON ws_bloc.id_bloc = ws_content.id_bloc
+                                    WHERE ws_pages.id_page = 1;");
+
+    $titreHomepage = [];
+    $articleAffiche = [];
+    $logoPlayStore = [];
+    $articleAR = [];
+
+
+    while ($row = mysqli_fetch_assoc($request)) {
+        if($row['id_bloc'] == "1"){
+            array_push($titreHomepage, $row);
+        } else if ($row['id_bloc'] == "2"){
+            array_push($articleAffiche, $row);
+        } else if ($row['id_bloc'] == "3"){
+            array_push($logoPlayStore, $row);
+        } else if ($row['id_bloc'] == "4"){
+            array_push($articleAR, $row);
+        }
+        // array_push($homepageArray, $row);
+    }
+
+    // echo "<pre>";
+    //     print_r($articleAffiche);
+    // echo "</pre>";
 
     echo '<div id="background_image_homepage">';
         echo '<img src="images/desktop/mapDesktop.jpg" id="mapImage" alt="background_image_homepage">';
@@ -36,12 +56,12 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
     </div></a>';
         echo '</div>';
 
-        echo create_title_bloc("FENÊTRE SUR NOTRE HERITAGE",
+        echo create_title_bloc("FENÊTRE SUR NOTRE HÉRITAGE",
             "page-title flex-center heigt-five-sized",
             "titleHomepage",
             "fade-right");
         echo create_link_image_bloc("images/logo_v3.svg",
-                                "logoToHomepage",
+                                "logoToHomepageAbout",
                                 "?page=homepage",
                                 "logoHomepage",
                                 "fade-right");
@@ -49,68 +69,38 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
     echo '</div>';
 
 
-    echo create_title_bloc("Comment renouer avec le passé, entre réabilitation et oubli ?", 
+    echo create_title_bloc($titreHomepage[0]["content"], 
                     "text-left flex-center page-title",
                     "problem",
                     "fade-up");
-
-    echo create_image_title_text_bloc("images/afficheTest.jpg",
+    echo '<div class="flex-center articleContainer">';
+    echo create_image_title_text_bloc($articleAffiche[0]["content"],
                                 "img-center-resp flex-center",
-                                "Une expérience interactive et nostalgique",
+                                $articleAffiche[1]["content"],
                                 "text-left flex-center article-title",
-                                "Explication expo : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                $articleAffiche[2]["content"],
                                 "text-left flex-center",
                                 "article flex-start", 
                                 "", 
                                 "fade-right");
-
-    // echo create_image_bloc("images/afficheTest.jpg",
-    //                     "img-center-resp flex-center",
-    //                     "afficheHomepage",
-    //                     "fade-up");
+    echo '</div>';
     
-    // echo create_title_bloc("Une expérience interactive et nostalgique",
-    //                 "text-left flex-center article-title",
-    //                 "titleAffiche",
-    //                 "fade-right");
-
-    // echo create_text_bloc("Explication expo : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    //                         "text-left flex-center",
-    //                         "textAffiche", 
-    //                         "fade-right");
-
-
-    
-    echo create_image_link_bloc("images/store_badge.svg", 
-                                    "https://play.google.com/",
+    echo create_image_link_bloc($logoPlayStore[0]["content"], 
+                                    $logoPlayStore[1]["content"],
                                     "flex-center", 
                                     "playstoreBadge",
                                     "none");
 
-    echo create_title_text_image_bloc("images/afficheTest.jpg",
+    echo '<div class="flex-center articleContainer">';
+    echo create_title_text_image_bloc($articleAR[0]["content"],
                                     "img-center-resp flex-center",
-                                    "Qu'est ce que la Réalité Augmentée ?",
+                                    $articleAR[1]["content"],
                                     "text-left flex-center article-title",
-                                    "Explication AR : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                    $articleAR[2]["content"],
                                     "text-left flex-center",
                                     "article flex-start",
                                     "",
                                     "fade-left");
-
-
-    // echo create_title_bloc("Qu'est ce que la Réalité Augmentée ?",
-    //                 "text-left flex-center article-title",
-    //                 "titleAR",
-    //                 "fade-right");
-
-    // echo create_text_bloc("Explication AR : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    //                         "text-left flex-center",
-    //                         "textAR",
-    //                         "fade-right");
-
-    // echo create_image_bloc("images/afficheTest.jpg",
-    //                         "img-center-resp flex-center",
-    //                         "imgAR",
-    //                         "none");
+    echo '</div>';
 
 ?>

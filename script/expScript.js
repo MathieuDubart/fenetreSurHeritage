@@ -8,7 +8,7 @@ function reduceVideo() {
 
     // PENSER A FAIRE QUERY SLEECTO
     if(window.scrollY > 10){
-        if (window.innerWidth > 980){
+        if (window.innerWidth > 767){
             x.style.width = "15%";
             y.style.left = "calc(50% - 7.5%)";
             x.style.height = "75%";
@@ -38,7 +38,10 @@ function reduceVideo() {
     }
 }
 
+// if (window.innerWidth < 844){
+//     document.getElementsByClassName("article")[0].style.width = calc(window.innerWidth - 48) + "px";
+// }
+
 window.addEventListener("scroll", () => {
         reduceVideo();
-        console.log("it works");
 })

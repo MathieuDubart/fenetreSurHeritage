@@ -9,7 +9,7 @@
 
 // ############################# LOGO & TITLE #############################
     echo create_link_image_bloc("images/logo_v2.svg",
-            "logoToHomepage",
+            "logoToHomepageAbout",
             "?page=homepage",
             "logoHomepage",
             "fade-right");
@@ -21,45 +21,40 @@
                     "fade-right");
 
 // ################################ CONTENT ###############################
-    echo create_image_title_text_bloc("images/aboutTest.jpg",
-        "img-center-resp flex-center",
-        "SOUS TITRE DE L'ARTICLE",
-        "text-left flex-center article-title",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "text-left flex-center",
-        "article flex-start", 
-        "", 
-        "fade-right");
+    echo '<div class="flex-center articleContainer">';
+        echo create_image_title_text_bloc("images/aboutTest.jpg",
+            "img-center-resp flex-center",
+            "SOUS TITRE DE L'ARTICLE",
+            "text-left flex-center article-title",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "text-left flex-center",
+            "article flex-start", 
+            "", 
+            "fade-right");
+    echo '</div>';
 
     echo create_title_bloc("RENCONTREZ NOTRE EQUIPE", 
                     "flex-center article-title",
                     "mainTitles",
                     "fade-up");
     echo '<div id="galleryContainer" class="flex-center">';
-    echo create_gallery_bloc(["images/aboutTest.jpg", "images/aboutTest.jpg", "images/aboutTest.jpg","images/aboutTest.jpg", "images/aboutTest.jpg", "images/aboutTest.jpg"],
+    echo create_gallery_bloc(["images/axel.jpg", "images/melisse.jpg", "images/baptiste.jpg","images/DA.jpg", "images/motion.jpg", "images/devs.jpg"],
                             ["notre coordinateur de projet", "notre chargée de com'","notre designer UI/UX","nos directrices artistiques","nos motion designers","nos développeurs"],
                             "flex-wrap flex-center",
                             "gallery",
                             "fade-up");
     echo '</div>';
     
-
-    echo create_title_text_image_bloc("images/aboutTest.jpg",
-        "img-center-resp flex-center",
-        "SOUS TITRE DE L'ARTICLE",
-        "text-left flex-center article-title",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "text-left flex-center",
-        "article flex-start",
-        "",
-        "fade-left");
-
-
-    
-
-
-
-
-
+    echo '<div class="flex-center articleContainer">';
+        echo create_title_text_image_bloc("images/aboutTest.jpg",
+            "img-center-resp flex-center",
+            "SOUS TITRE DE L'ARTICLE",
+            "text-left flex-center article-title",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "text-left flex-center",
+            "article flex-start",
+            "",
+            "fade-left");
+    echo '</div>';
 
 ?>

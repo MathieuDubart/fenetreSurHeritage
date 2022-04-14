@@ -28,8 +28,9 @@
 .exp-title {
     position: relative;
     z-index: 100;
-    top: 150%;
-    margin: 0 32px 175px 32px;
+    /* top: 100%; */
+    margin: 0 32px 175px 96px;
+    
 }
 
 .exp-title img {
@@ -65,7 +66,7 @@
 }
 
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 767px) {
 
     .contentContainer {
         height: 100vh;

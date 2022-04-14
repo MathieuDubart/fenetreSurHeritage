@@ -1,6 +1,6 @@
 // ##################################### KONAMI CODE ##################################### //
 
-
+/*
 // create a function for konami code
 const konamiCodeFunction = () => {
     // create an array of keycodes for konami code
@@ -31,3 +31,22 @@ const konamiCodeFunction = () => {
         }
     });
 }
+*/
+
+document.addEventListener('keydown', keyHandler, false);
+
+let keyHandler = (event) => {
+	console.log(event.key);
+};
+
+var pattern = ['ArrowUp',
+    'ArrowUp',
+    'ArrowDown',
+    'ArrowDown',
+    'ArrowLeft', 
+    'ArrowRight',
+    'ArrowLeft',
+    'ArrowRight', 
+    'b',
+    'a'
+];

@@ -46,7 +46,7 @@
     padding: 16px 0 16px 0;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 767px) {
     #about {
         width: 50%;
         padding-right: 24px;
@@ -60,5 +60,9 @@
     #socialMedias {
         width: 50%;
         padding-left: 100px;
+    }
+
+    #credits {
+        padding: 10px 10px 0 10px;
     }
 }
