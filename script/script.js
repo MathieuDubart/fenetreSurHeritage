@@ -1,60 +1,51 @@
 // ##################################### KONAMI CODE ##################################### //
 
-/*
-// create a function for konami code
-const konamiCodeFunction = () => {
-    // create an array of keycodes for konami code
-    let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-    // create a variable for the keycodes
-    let konamiCodePosition = 0;
-    // create a variable for the keycode
-    let konamiCodeEntered = [];
-    // create a variable for the keycode entered
-    // add an event listener for keydown
-    document.addEventListener('keydown', function (event) {
-        // add the keycode to the konami code entered
-        konamiCodeEntered.push(event.keyCode);
-        // if the keycode is not the same as the konami code
-        if (konamiCode[konamiCodePosition] !== konamiCodeEntered[konamiCodePosition]) {
-            // reset the konami code entered
-            konamiCodeEntered = [];
-        }
-        // if the keycode is the same as the konami code
-        else {
-            // increase the konami code position
-            konamiCodePosition++;
-        }
-        // if the konami code position is the same as the length of the konami code
-        if (konamiCodePosition === konamiCode.length) {
-            // run the konami code function
-            konamiCodeFunction();
-        }
-    });
-}
-*/
 /* ########################################### LOADING PAGE #####################################*/
-// document.body.classList.add('stop-scrolling');
+
 window.onload = function() {
     document.body.classList.remove('stop-scrolling');
     document.querySelector(".loadingPage").style.display = "none";
 }
+/* ########################################### CHANGE SVG COLOR #####################################*/
 
-/* ########################################### KONAMI CODE #####################################*/
+let bugermenu = document.getElementById("burgermenuImg");
+console.log(burgermenu);
+let bool = true;
 
-const keyHandler = (event) => {
-    console.log(event.key);
-};
+bugermenu.addEventListener("click", function() {
+    if (bool == true) {
+        document.getElementById("menuContainer").style.display = "flex";
+        document.getElementById("menuContainer").style.overflowY = "hidden";
+        bool = false;
+    } else {
+        document.getElementById("menuContainer").style.display = "none";
+        document.getElementById("menuContainer").style.overflowY = "scroll";
+        bool = true;
+    }
+});
 
-document.addEventListener('keydown', keyHandler, false);
 
-var pattern = ['ArrowUp',
-    'ArrowUp',
-    'ArrowDown',
-    'ArrowDown',
-    'ArrowLeft', 
-    'ArrowRight',
-    'ArrowLeft',
-    'ArrowRight', 
-    'b',
-    'a'
-];
+/* ########################################### KONAMI #####################################*/
+
+// document.addEventListener('keydown', keyHandler, false);
+
+// let pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+// let current = 0;
+
+// let keyHandler = (event) => {
+// 	console.log(event.key);
+
+//     // Si le patterne n'est pas respecté, le code se reset
+// 	if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+// 		current = 0;
+// 		return;
+// 	}
+
+// 	current++;
+
+// 	// SI le code est complet, afficher et reset
+// 	if (pattern.length === current) {
+// 		current = 0;
+// 		window.alert('Hadouken');
+// 	}
+// };

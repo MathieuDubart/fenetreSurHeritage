@@ -1,7 +1,5 @@
 <?php
-    $get = $_GET;
-
-    $error404 = true;
+     $error404 = true;
 
     if(!isset($_GET["page"])){
         // echo "<div id='homePage'>";
@@ -10,10 +8,11 @@
         // echo "</div>";
     }else{
         foreach($pagesArray as $key => $page){
-            if($page == $get["page"]){
+            if($page == $_GET["page"]){
                 // require "template/pages/".$page.".php/";
                 // echo dirname (__FILE__);
                 require dirname (__FILE__)."/../pages/".$page.".php";
+
                 $error404 = false;
             }
         }

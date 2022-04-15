@@ -6,8 +6,9 @@
     else {
         // $requete=mysqli_query($connection,"SELECT * FROM ws_bloc LIMIT 3");
     }
-    
 
+    
+// ############################# GET INFO BDD #############################
     $request = mysqli_query($connection, "SELECT ws_pages.nom_page, ws_bloc.id_bloc, ws_content.content, ws_content.ordre FROM `ws_pages`
                                     LEFT JOIN ws_bloc ON ws_pages.id_page = ws_bloc.id_page
                                     LEFT JOIN ws_content ON ws_bloc.id_bloc = ws_content.id_bloc
@@ -18,6 +19,8 @@ $titreHomepage = [];
 $articleAffiche = [];
 $logoPlayStore = [];
 $articleAR = [];
+
+
 
 
 while ($row = mysqli_fetch_assoc($request)) {
@@ -138,24 +141,24 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
         array_push($avisArray, $row);
     }
 
-    echo create_title_bloc("ce que vous pensez de nous et de l'expérience", 
+    echo create_title_bloc("Ce que vous avez pensé de l'expérience", 
                         "text-left flex-center little-title",
                         "rencontre",
-                        "fade-up");
+                        "fade-left");
 
         echo '<div class="flex-center articleContainer" id="avisContainer">';
-            echo '<div class="avis flex-start flex-column" id="avis1">';
+            echo '<div class="avis flex-start flex-column" data-aos="fade-right" id="avis1">';
                 echo '<div class="flex-left flex-row" id="firstLine">
                     <img src="images/logoAvatar.png" alt="userAvatar">
                     <h3>'.$avisArray[0]['prenom'].' '.$avisArray[0]['nom'].'<h3>
                 </div>';
 
                 echo '<div class="text-left" id="secondLine">
-                    <p>'.$avisArray[0]['content'].'</p>
+                    <p class="p-avis">'.$avisArray[0]['content'].'</p>
                 </div>';
             echo '</div>';
 
-            echo '<div class="avis flex-start flex-column" id="avis2">';
+            echo '<div class="avis flex-start flex-column" data-aos="fade-left" id="avis2">';
             echo '<div class="flex-left flex-row" id="firstLine">
                 <img src="images/logoAvatar.png" alt="userAvatar">
                 <h3>'.$avisArray[1]['prenom'].' '.$avisArray[1]['nom'].'<h3>
@@ -166,7 +169,7 @@ echo '<a href="?page=usineDuport"><div id="usineDuport">
             </div>';
         echo '</div>';
 
-        echo '<div class="avis flex-start flex-column" id="avis3">';
+        echo '<div class="avis flex-start flex-column" data-aos="fade-right" id="avis3">';
             echo '<div class="flex-left flex-row" id="firstLine">
                 <img src="images/logoAvatar.png" alt="userAvatar">
                 <h3>'.$avisArray[2]['prenom'].' '.$avisArray[2]['nom'].'<h3>

@@ -21,6 +21,11 @@
     #hg4 {animation-delay: 2.5s}
     #hg5 {animation-delay: 3s}
     #EB6316
+
+
+    papeterieV2:hover {
+        animation-play-state: paused;
+    }
 </style>
 
 

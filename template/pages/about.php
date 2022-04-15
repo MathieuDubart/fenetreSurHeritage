@@ -66,7 +66,7 @@ echo '<div class="loadingPage">
 
     echo create_title_bloc($titleGallery[0]['content'], 
                     "flex-center article-title",
-                    "mainTitles",
+                    "",
                     "fade-up");
     echo '<div id="galleryContainer" class="flex-center">';
     echo create_gallery_bloc(["images/axel.jpg", "images/melisse.jpg", "images/baptiste.jpg","images/DA.jpg", "images/motion.jpg", "images/devs.jpg"],
@@ -77,35 +77,66 @@ echo '<div class="loadingPage">
     echo '</div>';
     
     echo '<div class="flex-center articleContainer">';
-        echo create_title_text_image_bloc("images/aboutTest.jpg",
-            "img-center-resp flex-center",
-            "SOUS TITRE DE L'ARTICLE",
-            "text-left flex-center article-title",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "text-left flex-center",
-            "article flex-start",
-            "",
-            "fade-left");
+        echo '<div class="groupImg">
+                <img src="images/group.jpg" alt="photo de groupe"/>
+            </div>';
+    
     echo '</div>';
 
-    echo "<div id='titleForm'>
-            <h2 class='text-center flex-center article-title' id='avisTitre'> Votre avis compte </h2>
-        </div>";
+    // echo '<div class="flex-center articleContainer">';
+    //     echo create_title_text_image_bloc("images/aboutTest.jpg",
+    //         "img-center-resp flex-center",
+    //         "SOUS TITRE DE L'ARTICLE",
+    //         "text-left flex-center article-title",
+    //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //         "text-left flex-center",
+    //         "article flex-start",
+    //         "",
+    //         "fade-left");
+    // echo '</div>';
 
+
+// ############################# SEND AVIS ##############################
+
+    
+
+    if(isset($_POST['nom'])){
+        $nom =  strval($_POST['nom']);
+        $prenom =  strval($_POST['prenom']);
+        $email =  strval($_POST['email']);
+        $avis =  strval($_POST['avis']);
+        if($nom != "") {
+            $sendAvis = mysqli_query($connection, "INSERT INTO ws_avis (id_avis, nom, prenom, adresseMail, content) VALUES (NULL, '".$nom."', '".$prenom."', '".$email."', '".$avis."')");
+        }
+        echo create_title_bloc("Merci pour votre retour !", 
+                    "flex-center article-title",
+                    "",
+                    "fade-left");
+
+        echo '<div class="flex-center articleContainer">';
+        echo '<div class="groupImg">
+                <img src="https://assets.website-files.com/5f71acc15d9c19761b5fe5f6/60ed903ceb83c99de4194adb_De%CC%81clinaison6.png" alt="photo de groupe"/>
+            </div>';
+    
+        echo '</div>';
+    }else{
+    echo create_title_bloc("Votre avis compte", 
+                        "flex-center article-title",
+                        "",
+                        "fade-left");
     echo "<div id='avisFormContainer'>";
-        echo "<form action='https://wsb1.gobelins.fullstory.fr/' method='POST' id='avisForm'>
-            <p> Nom: <input type='text' name='nom' placeholder='Nom' class='inputStyle' required> </p>
-            <p> Prénom: <input type='text' name='prenom' placeholder='Prénom' class='inputStyle' required> </p>
-            <p> Email: <input type='text' name='email' placeholder='Email' class='inputStyle' required> </p>
-            <p> Avis: <textarea placeholder='Avis' class='inputStyle' required></textarea> <p>
-                <input type='submit' class='btn-homepage' value='envoyer'>
+        echo "<form method='POST' id='avisForm' action='?page=about'>
+            <input type='text' name='nom' placeholder='Nom' class='inputStyle' maxlength='50' required>
+            <input type='text' name='prenom' placeholder='Prénom' class='inputStyle' maxlength='50' required>
+            <input type='mail' name='email' placeholder='Email' class='inputStyle' maxlength='50' required>
+            <textarea placeholder='Avis' class='inputStyle' maxlength='150' name='avis'  resize='none' required></textarea>
+                <input type='submit' class='btn-homepage' value='Envoyer'>
             </form>";
     echo "</div>";
+    }
 
-    $nom =  strval($_POST['nom']);
-    $prenom =  strval($_POST['prenom']);
-    $email =  strval($_POST['email']);
-    $avis =  strval($_POST['avis']);
 
-    $sendAvis = mysqli_query($connection, "INSERT INTO `ws_avis` (`id_avis`, `nom`, `prenom`, `email`, `avis`) VALUES (NULL, '$nom', '$prenom', '$email', '$avis');");
+
+    
+    
 ?>

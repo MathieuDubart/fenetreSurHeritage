@@ -20,6 +20,11 @@
     #hg4 {animation-delay: 1.5s}
     #hg5 {animation-delay: 2s}
     #EB6316
+
+
+    forgeV2:hover > * {
+        animation-play-state: paused;
+    }
 </style>
 
 

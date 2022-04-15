@@ -20,6 +20,11 @@
     #hg4 {animation-delay: 2s}
     #hg5 {animation-delay: 2.5s}
     #EB6316
+
+
+    usineV2:hover > * {
+        animation-play-state: paused;
+    }
 </style>
 
 

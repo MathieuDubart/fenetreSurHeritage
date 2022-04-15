@@ -28,6 +28,10 @@
             AOS.init();
         </script>
 
+    <!--                    HEADER                    -->
+        <?php
+            require"template/structure/header.php";
+        ?>
     <!--                    CONTENT                    -->
 
     <!-- <div id="content"> -->

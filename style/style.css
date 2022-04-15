@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
+    scroll-behavior: smooth;
 }
 @font-face {
     font-family: 'Veneer';
@@ -155,6 +156,16 @@ a {
     overflow-x: hidden;
 }
 
+.btn-homepage{
+    background-color: #EB6316;
+    color: white;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 24px 8px 24px;
+}
+
+
 
 /* ########################################### MEDIA QUERIE #####################################*/
 @media screen and (min-width: 767px) {
@@ -249,6 +260,10 @@ a {
     .heigt-five-sized{
         width: 85%;
     }
+    .p-avis{
+        width: 70%;
+        height: fit-content;
+    }
 
     p{
         font-family: 'Futura';
@@ -316,11 +331,40 @@ a {
         height: 500px;
         width: 100%;
     }
+
+    .groupImg{
+        width: 50%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #EB6316;
+        margin-bottom: 48px;
+        /* border: 1px solid red; */
+    }
+    .groupImg img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* ########################################### CSS FOR BLOC FUNCTION #####################################*/
 
 @media screen and (max-width: 767px) {
+    .groupImg{
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #EB6316;
+        margin-bottom: 48px;
+        /* border: 1px solid red; */
+    }
+    .groupImg img{
+        width: 100%;
+        height: auto;
+    }
 
     #error404 {
         height: 80vh;
@@ -338,7 +382,7 @@ a {
     }
     #mainTitles{
         position: relative;
-        margin-top: 20px;
+        margin-top: 85px;
     }
 
     .article{
@@ -456,13 +500,17 @@ a {
         height: 500px;
         width: 100%;
     }
+    #merci{
+        width: 80%;
+        height: 200px;
+        border: 2px solid #EB6316;
+    }
 
 }
 
 /* ########################################### Form Style #####################################*/
 
 #avisFormContainer{
-    border: 1px blue solid;
     width: 100%;
 }
 
@@ -476,13 +524,23 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
     height: fit-content;
-    border: 1px green solid;
 }
 
 #avisForm p {
     color: #EB6316;
+}
+
+#avisForm textarea {
+    width: 198px;
+    height: 80px;
+    margin: 12px;
+}
+
+#avisForm input {
+    /* padding: 12px; */
+    margin: 12px;
 }
 
 .inputStyle {
@@ -495,6 +553,5 @@ a {
     #avisForm{
         width: 100%;
         height: fit-content;
-        border: 1px green solid;
     }
 }
